@@ -114,20 +114,20 @@ export function UnifiedView({ data, pagination, currentPage, onPageChange }: Uni
   };
 
   return (
-    <div className="space-y-4 md:space-y-6">
+    <div className="space-y-3 md:space-y-6">
       {/* Filters */}
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col md:flex-row gap-2 md:gap-4">
         <div className="relative flex-1">
           <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Search by Call ID, question, or response..."
-            className="pl-8"
+            placeholder="Search..."
+            className="pl-8 text-sm md:text-base"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
         <Select value={confidenceFilter} onValueChange={setConfidenceFilter}>
-          <SelectTrigger className="w-full md:w-[180px]">
+          <SelectTrigger className="w-full md:w-[180px] text-sm md:text-base">
             <SelectValue placeholder="Filter by confidence" />
           </SelectTrigger>
           <SelectContent>
@@ -139,7 +139,7 @@ export function UnifiedView({ data, pagination, currentPage, onPageChange }: Uni
         </Select>
       </div>
 
-      <ScrollArea className="h-[500px] md:h-[800px]">
+      <ScrollArea className="h-[400px] md:h-[800px]">
         <div className="space-y-2">
           {filteredData.map((interaction) => (
             <Collapsible
@@ -149,16 +149,16 @@ export function UnifiedView({ data, pagination, currentPage, onPageChange }: Uni
             >
               <Card className="overflow-hidden">
                 <CollapsibleTrigger className="w-full">
-                  <div className="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex items-center gap-3">
-                      <span className="font-medium">
+                  <div className="flex items-center justify-between p-2 md:p-4 hover:bg-gray-50 transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3">
+                      <span className="text-sm md:text-base font-medium">
                         Call ID: {interaction.callId}
                       </span>
 
-                      <div className="flex gap-2">
+                      <div className="flex gap-1 md:gap-2">
                         <Badge
                           variant="secondary"
-                          className="flex items-center gap-1"
+                          className="flex items-center gap-1 text-xs md:text-sm"
                         >
                           <MessageCircle className="h-3 w-3" />
                           {interaction.confidence_scores.length}
@@ -175,7 +175,7 @@ export function UnifiedView({ data, pagination, currentPage, onPageChange }: Uni
                         {interaction.recommendations.length > 0 && (
                           <Badge
                             variant="default"
-                            className="flex items-center gap-1"
+                            className="flex items-center gap-1 text-xs md:text-sm"
                           >
                             <Lightbulb className="h-3 w-3" />
                             {interaction.recommendations.length}
@@ -184,8 +184,19 @@ export function UnifiedView({ data, pagination, currentPage, onPageChange }: Uni
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="flex items-center gap-2">
+                      <div className="hidden md:flex items-center gap-2">
                         {renderConfidenceSticks(interaction.overall_confidence)}
+                      </div>
+                      <div className="flex md:hidden">
+                        <Badge className={`${
+                          interaction.overall_confidence >= 0.8
+                            ? "bg-green-500"
+                            : interaction.overall_confidence >= 0.6
+                            ? "bg-yellow-500"
+                            : "bg-red-500"
+                        } text-white`}>
+                          {(interaction.overall_confidence * 100).toFixed()}%
+                        </Badge>
                       </div>
                       <ChevronDown
                         className={`h-4 w-4 transition-transform duration-200 ${
@@ -199,37 +210,35 @@ export function UnifiedView({ data, pagination, currentPage, onPageChange }: Uni
                 </CollapsibleTrigger>
 
                 <CollapsibleContent>
-                  <div className="p-4 border-t bg-gray-50">
+                  <div className="p-2 md:p-4 border-t bg-gray-50">
                     {/* Conversation Timeline */}
-                    <div className="space-y-4">
+                    <div className="space-y-3 md:space-y-4">
                       {interaction.confidence_scores.map((score, idx) => (
-                        <div key={idx} className="relative pl-6">
+                        <div key={idx} className="relative pl-4 md:pl-6">
                           {/* Timeline connector */}
                           <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-200" />
                           <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-gray-400" />
 
                           <div className="space-y-2">
                             {/* User Message */}
-                            <div className="p-3 bg-white rounded-lg shadow-sm">
-                              <p className="text-sm font-medium text-gray-500 mb-1">
+                            <div className="p-2 md:p-3 bg-white rounded-lg shadow-sm">
+                              <p className="text-xs md:text-sm font-medium text-gray-500 mb-1">
                                 User Question
                               </p>
-                              <p>{score.client_question}</p>
+                              <p className="text-sm md:text-base">{score.client_question}</p>
                             </div>
 
                             {/* Bot Response */}
-                            <div className="ml-12 p-3 bg-blue-50 rounded-lg shadow-sm">
-                              <div className="flex justify-between items-start">
+                            <div className="ml-4 md:ml-12 p-2 md:p-3 bg-blue-50 rounded-lg shadow-sm">
+                              <div className="flex justify-between items-start gap-2">
                                 <div className="flex-1">
-                                  <p className="text-sm font-medium text-blue-600 mb-1">
+                                  <p className="text-xs md:text-sm font-medium text-blue-600 mb-1">
                                     Assistant Response
                                   </p>
-                                  <p>{score.bot_response}</p>
+                                  <p className="text-sm md:text-base">{score.bot_response}</p>
                                 </div>
-                                <div className="ml-4">
-                                  {renderConfidenceSticks(
-                                    score.confidence_score
-                                  )}
+                                <div className="ml-2 md:ml-4">
+                                  {renderConfidenceSticks(score.confidence_score)}
                                 </div>
                               </div>
                             </div>
@@ -242,7 +251,7 @@ export function UnifiedView({ data, pagination, currentPage, onPageChange }: Uni
                       interaction.recommendations.length > 0) && (
                       <div className="mt-6 border-t pt-4">
                         <div className="bg-white rounded-lg p-4">
-                          <div className="flex gap-4">
+                          <div className="flex gap-4 flex-col md:flex-row">
                             {/* Low Confidence Issues */}
                             {interaction.low_confidence_instances.length >
                               0 && (

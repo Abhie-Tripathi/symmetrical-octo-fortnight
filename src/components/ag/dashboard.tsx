@@ -96,11 +96,11 @@ export default function AgentsPanelDashboard() {
   }
 
   return (
-    <div className="container mx-auto py-4 md:py-6 px-4 md:px-6 space-y-4 md:space-y-6">
+    <div className="container mx-auto py-2 md:py-6 px-2 md:px-6 space-y-3 md:space-y-6 min-w-[320px]">
       <OverallStats data={data.data} />
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl md:text-2xl">
+      <Card className="overflow-hidden">
+        <CardHeader className="p-3 md:p-6">
+          <CardTitle className="text-lg md:text-2xl">
             Interaction Analysis
           </CardTitle>
         </CardHeader>
