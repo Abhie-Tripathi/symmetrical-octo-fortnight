@@ -2,32 +2,262 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.custom-calendar .rbc-time-column,
+.custom-calendar .rbc-timeslot-group,
+.custom-calendar .rbc-label {
+  display: none;
+}
+
+.custom-calendar .rbc-time-view {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-calendar .rbc-time-header {
+  border-bottom: none;
+}
+
+.custom-calendar .rbc-time-header-content {
+  border-left: none;
+  min-height: 450px;
+}
+
+.custom-calendar .rbc-allday-cell {
+  height: 100% !important;
+  max-height: none !important;
+  flex: 1;
+}
+
+.custom-calendar .rbc-row-segment {
+  padding: 1px 1px;
+}
+
+.custom-calendar .rbc-event {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.custom-calendar .rbc-event-content {
+  font-size: 0.75rem;
+}
+
+.custom-calendar .rbc-header {
+  border-bottom: none;
+}
+
+.custom-calendar .rbc-header + .rbc-header {
+  border-left: none;
+}
+
+.custom-calendar .rbc-day-bg + .rbc-day-bg {
+  border-left: none;
+}
+
+.custom-calendar .rbc-time-content {
+  display: none;
+}
+
+.custom-calendar .rbc-time-header-content {
+  border-top: none;
+}
+
+.custom-calendar .rbc-today {
+  background-color: transparent;
+}
+
+.rbc-day-bg {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.rbc-button-link {
+  width: 100%;
+  height: 100%;
+}
+
+.rbc-header {
+  padding: 0 !important;
+}
+
+.rbc-date-cell {
+  padding-right: 0 !important;
+}
+
+svg.line-chart {
+  display: block;
+  margin: auto;
+}
+
+svg.line-chart g.y-chart g.tick text {
+  height: 18px;
+  width: 21px;
+  fill: #9ba5af;
+  font-family: IBM Plex Sans, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+}
+
+svg.line-chart g.y-chart g.tick line {
+  stroke: #9ba5af;
+  stroke-width: 0.5;
+}
+
+svg.line-chart g.x-chart path,
+svg.line-chart g.x-chart line {
+  display: none;
+}
+
+svg.line-chart g.x-chart text {
+  height: 20px;
+  width: 36px;
+  color: #222;
+  font-family: IBM Plex Sans, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  fill: currentColor;
+}
+
+svg.line-chart g.y-chart path {
+  display: none;
+}
+
+svg.line-chart path.line-chart {
+  stroke: #4d1bf3;
+  stroke-width: 2;
+}
+
+.aei-chart .chart-area {
+  fill: #fcfcfc;
+  stroke: #e3e3e3;
+  shape-rendering: crispEdges;
+}
+
+.aei-chart .y-axis-label,
+.aei-chart g.x-chart g.tick text,
+.aei-chart g.y-chart g.tick text {
+  font-size: 12px;
+  fill: currentColor;
+}
+
+.aei-chart .line-chart text {
+  font-size: 12px;
+}
+
+.aei-chart g.x-chart g.tick.notification-date-tick text {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.aei-chart .y-axis-label {
+  color: #9ba5af;
+}
+
+.aei-chart g.y-chart g.tick:first-of-type line {
+  display: none;
+}
+
+.aei-chart g.y-chart g.tick line {
+  stroke: #c9c9c9;
+  shape-rendering: crispEdges;
+}
+
+.aei-chart[data-v-c1fded49] {
+  box-sizing: border-box;
+  font-size: 14px;
+  min-height: 300px;
+  padding: 0 80px 0 20px;
+  width: 100%;
+}
+
+.aei-chart-inner[data-v-c1fded49] {
+  position: relative;
+}
+
+.handle {
+  position: absolute;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 50px;
+  height: 25px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px #28374633;
+  border-radius: 3px;
+  color: #f23380;
 }

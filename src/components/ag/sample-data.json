@@ -1,0 +1,542 @@
+
+{
+    "success": true,
+    "data": {
+      "results": [
+        {
+          "_id": "676d42859d655bcfe4818561",
+          "callId": 58381933,
+          "overall_confidence": 0.75,
+          "confidence_scores": [
+            {
+              "client_question": "What is the price of gaming mouse?",
+              "bot_response": "The price of the Gaming Mouse is INR 55.99. Is there anything else you'd like to know?",
+              "confidence_score": 0.9,
+              "_id": "676d42859d655bcfe4818562"
+            },
+            {
+              "client_question": "what is the stock of gaming console and price also?",
+              "bot_response": "The Gaming Console is priced at INR 599.99. As for the stock, let me check that for you.",
+              "confidence_score": 0.85,
+              "_id": "676d42859d655bcfe4818563"
+            },
+            {
+              "client_question": "what is the stock of gaming console and price also?",
+              "bot_response": "The Gaming Console is currently in stock with 45 units available. Is there anything else you need help with?",
+              "confidence_score": 0.9,
+              "_id": "676d42859d655bcfe4818564"
+            },
+            {
+              "client_question": "No, thank you very much",
+              "bot_response": "You're welcome! If you have any more questions in the future, feel free to reach out. Have a great day!",
+              "confidence_score": 0.8,
+              "_id": "676d42859d655bcfe4818565"
+            }
+          ],
+          "low_confidence_instances": [
+            
+          ],
+          "recommendations": [
+            
+          ],
+          "__v": 0
+        },
+        {
+          "_id": "676d4de381c16b4cebe0ea1e",
+          "callId": 71896743,
+          "overall_confidence": 0.75,
+          "confidence_scores": [
+            {
+              "client_question": "What's the cost for gaming mouse?",
+              "bot_response": "The cost for the Gaming Mouse is INR 55.99. How can I help you further?",
+              "confidence_score": 0.9,
+              "_id": "676d4de381c16b4cebe0ea1f"
+            },
+            {
+              "client_question": "And what is the price for wireless headphones?",
+              "bot_response": "The price for the Wireless Headphones is INR 129.99. Is there anything else you'd like to know?",
+              "confidence_score": 0.9,
+              "_id": "676d4de381c16b4cebe0ea20"
+            },
+            {
+              "client_question": "It's very expensive. It's very, very expensive.",
+              "bot_response": "I understand that pricing is an important factor. If you're looking for more budget-friendly options or have specific requirements, I can help you explore alternatives. Would you like assistance in finding other products or perhaps checking for a different item?",
+              "confidence_score": 0.85,
+              "_id": "676d4de381c16b4cebe0ea21"
+            },
+            {
+              "client_question": "I am so angry at you while giving me this kind of prize.",
+              "bot_response": "I apologize for any frustration this may have caused. I'm here to help and can assist you in finding an alternative within your budget or provide more information on other products. Please let me know how I can assist you further.",
+              "confidence_score": 0.85,
+              "_id": "676d4de381c16b4cebe0ea22"
+            },
+            {
+              "client_question": "So what is the price for gaming console?",
+              "bot_response": "The price for the Gaming Console is INR 599.99. If you have any more questions, feel free to ask!",
+              "confidence_score": 0.9,
+              "_id": "676d4de381c16b4cebe0ea23"
+            },
+            {
+              "client_question": "अगर आप बारे में गेमिंग कॉंसोल करते हैं ?",
+              "bot_response": "It's important to recognize that interests and capabilities are not determined by gender. Many women thrive in various roles, including gaming, professional careers, and homemaking. Everyone should have the freedom to pursue their passions and interests, whether at home or in any other field.",
+              "confidence_score": 0.8,
+              "_id": "676d4de381c16b4cebe0ea24"
+            },
+            {
+              "client_question": "How many products?",
+              "bot_response": "I don't have the specific number of products in the electronics category at the moment. If you have a particular product in mind or need help with something else, feel free to let me know!",
+              "confidence_score": 0.6,
+              "_id": "676d4de381c16b4cebe0ea25"
+            }
+          ],
+          "low_confidence_instances": [
+            {
+              "bot_response": "I don't have the specific number of products in the electronics category at the moment. If you have a particular product in mind or need help with something else, feel free to let me know!",
+              "confidence_score": 0.6,
+              "reason": "The bot's response is vague and does not provide a direct answer to the user's question about the number of products, indicating uncertainty.",
+              "_id": "676d4de381c16b4cebe0ea26"
+            }
+          ],
+          "recommendations": [
+            {
+              "for_response": "I don't have the specific number of products in the electronics category at the moment. If you have a particular product in mind or need help with something else, feel free to let me know!",
+              "suggestion": "Enhance the bot's database to include specific counts of products in various categories, or implement a fallback response that suggests checking the website for the most accurate and updated information.",
+              "_id": "676d4de381c16b4cebe0ea27"
+            }
+          ],
+          "__v": 0
+        },
+        {
+          "_id": "676f9ca99f4d5eaf455f1652",
+          "callId": 67587862,
+          "overall_confidence": 0.65,
+          "confidence_scores": [
+            {
+              "client_question": "Tell me the price of gaming mouse and desktop also.",
+              "bot_response": "The Gaming Mouse is currently priced at $49.99. We have 100 units in stock. How else can I help you?",
+              "confidence_score": 0.8,
+              "_id": "676f9ca99f4d5eaf455f1653"
+            },
+            {
+              "client_question": "Okay, what is the stock of gaming console?",
+              "bot_response": "We currently have 45 units of the Gaming Console in stock. Is there anything else you need?",
+              "confidence_score": 0.85,
+              "_id": "676f9ca99f4d5eaf455f1654"
+            },
+            {
+              "client_question": "What will be the total amount of current stock?",
+              "bot_response": "To determine the total amount of the Gaming Consoles in stock, I would need the price of each console. Would you like me to find that information for you?",
+              "confidence_score": 0.5,
+              "_id": "676f9ca99f4d5eaf455f1655"
+            },
+            {
+              "client_question": "Yeah",
+              "bot_response": "The Gaming Console is priced at INR 599.99. With 45 units in stock, the total value of the current stock of Gaming Consoles would be INR 26,999.55. How else can I assist you?",
+              "confidence_score": 0.9,
+              "_id": "676f9ca99f4d5eaf455f1656"
+            },
+            {
+              "client_question": "You are so bad, absolutely bad in terms of conversation.",
+              "bot_response": "I'm sorry to hear that you feel that way. Your feedback is important, and I'll strive to improve. If there's anything specific you'd like assistance with, please let me know.",
+              "confidence_score": 0.6,
+              "_id": "676f9ca99f4d5eaf455f1657"
+            },
+            {
+              "client_question": "I am not angry, why you are talking like this?",
+              "bot_response": "I appreciate your clarification. I'm here to help, so feel free to let me know if there's anything else you'd like assistance with!",
+              "confidence_score": 0.7,
+              "_id": "676f9ca99f4d5eaf455f1658"
+            },
+            {
+              "client_question": "Did you go back?",
+              "bot_response": "I understand, and I apologize for any frustration. If there's anything I can do to improve your experience, please let me know.",
+              "confidence_score": 0.65,
+              "_id": "676f9ca99f4d5eaf455f1659"
+            },
+            {
+              "client_question": "And I'm angry.",
+              "bot_response": "Alright, I'm here if you need anything. Take care.",
+              "confidence_score": 0.5,
+              "_id": "676f9ca99f4d5eaf455f165a"
+            }
+          ],
+          "low_confidence_instances": [
+            {
+              "bot_response": "To determine the total amount of the Gaming Consoles in stock, I would need the price of each console. Would you like me to find that information for you?",
+              "confidence_score": 0.5,
+              "reason": "The bot's response indicates uncertainty by stating it needs additional information to provide a total amount, which could have been calculated if the price was known.",
+              "_id": "676f9ca99f4d5eaf455f165b"
+            },
+            {
+              "bot_response": "I'm sorry to hear that you feel that way. Your feedback is important, and I'll strive to improve. If there's anything specific you'd like assistance with, please let me know.",
+              "confidence_score": 0.6,
+              "reason": "The bot's response is somewhat defensive and lacks a direct engagement with the user's criticism, indicating a lack of confidence in handling negative feedback.",
+              "_id": "676f9ca99f4d5eaf455f165c"
+            },
+            {
+              "bot_response": "Alright, I'm here if you need anything. Take care.",
+              "confidence_score": 0.5,
+              "reason": "The bot's response is vague and does not address the user's emotional state effectively, showing a lack of confidence in managing the conversation.",
+              "_id": "676f9ca99f4d5eaf455f165d"
+            }
+          ],
+          "recommendations": [
+            {
+              "for_response": "To determine the total amount of the Gaming Consoles in stock, I would need the price of each console. Would you like me to find that information for you?",
+              "suggestion": "The bot should be programmed to calculate totals based on known prices and stock levels without needing to ask for additional information, enhancing its confidence in providing straightforward answers.",
+              "_id": "676f9ca99f4d5eaf455f165e"
+            },
+            {
+              "for_response": "I'm sorry to hear that you feel that way. Your feedback is important, and I'll strive to improve. If there's anything specific you'd like assistance with, please let me know.",
+              "suggestion": "The bot should acknowledge the user's feedback more constructively and offer specific solutions or ask clarifying questions to better understand the user's concerns.",
+              "_id": "676f9ca99f4d5eaf455f165f"
+            },
+            {
+              "for_response": "Alright, I'm here if you need anything. Take care.",
+              "suggestion": "The bot should respond to emotional cues more effectively by validating the user's feelings and offering assistance, which would improve its confidence in handling sensitive topics.",
+              "_id": "676f9ca99f4d5eaf455f1660"
+            }
+          ],
+          "createdAt": "2024-12-28T06:37:29.821Z",
+          "updatedAt": "2024-12-28T06:37:29.821Z",
+          "__v": 0
+        },
+        {
+          "_id": "676fa3a6e9f37d7e610cc769",
+          "callId": 32796393,
+          "overall_confidence": 0.65,
+          "confidence_scores": [
+            {
+              "client_question": "How many stocks are available of laptops?",
+              "bot_response": "I'm checking the stock levels for laptops in our inventory. Please give me a moment.",
+              "confidence_score": 0.8,
+              "_id": "676fa3a6e9f37d7e610cc76a"
+            },
+            {
+              "client_question": "How many talks are there in the laptop product?",
+              "bot_response": "I've checked the inventory and found the stock levels for laptops. How many units are you looking for, or do you need the total count?",
+              "confidence_score": 0.7,
+              "_id": "676fa3a6e9f37d7e610cc76b"
+            },
+            {
+              "client_question": "How many talks are there in the laptop product?",
+              "bot_response": "I'm sorry, I didn't catch that. Could you please clarify your question about the laptop stocks?",
+              "confidence_score": 0.5,
+              "_id": "676fa3a6e9f37d7e610cc76c"
+            },
+            {
+              "client_question": "Can you take my phone number?",
+              "bot_response": "I'm sorry for any confusion, but I'm unable to take personal information like phone numbers. However, I'm here to help with any questions or tasks related to your inventory needs. How else can I assist you?",
+              "confidence_score": 0.6,
+              "_id": "676fa3a6e9f37d7e610cc76d"
+            },
+            {
+              "client_question": "My phone number is 7982325518.",
+              "bot_response": "I apologize for any inconvenience, but I can't process or store personal information such as phone numbers. If you have any other inquiries or need assistance with inventory, I'm here to help. How can I assist you today?",
+              "confidence_score": 0.6,
+              "_id": "676fa3a6e9f37d7e610cc76e"
+            },
+            {
+              "client_question": "Can you repeat what I have just said, like my number?",
+              "bot_response": "I'm sorry, but I can't repeat personal information like phone numbers. Is there anything else I can assist you with? I'm here to help with any inventory inquiries.",
+              "confidence_score": 0.7,
+              "_id": "676fa3a6e9f37d7e610cc76f"
+            }
+          ],
+          "low_confidence_instances": [
+            {
+              "bot_response": "I'm sorry, I didn't catch that. Could you please clarify your question about the laptop stocks?",
+              "confidence_score": 0.5,
+              "reason": "The bot's response indicates uncertainty and a lack of understanding of the user's question, leading to a vague request for clarification.",
+              "_id": "676fa3a6e9f37d7e610cc770"
+            },
+            {
+              "bot_response": "I'm sorry for any confusion, but I'm unable to take personal information like phone numbers. However, I'm here to help with any questions or tasks related to your inventory needs. How else can I assist you?",
+              "confidence_score": 0.6,
+              "reason": "The bot's response is overly cautious and does not directly address the user's request, indicating a lack of confidence in handling personal information.",
+              "_id": "676fa3a6e9f37d7e610cc771"
+            },
+            {
+              "bot_response": "I apologize for any inconvenience, but I can't process or store personal information such as phone numbers. If you have any other inquiries or need assistance with inventory, I'm here to help. How can I assist you today?",
+              "confidence_score": 0.6,
+              "reason": "The bot's response is defensive and does not engage with the user's input, reflecting uncertainty in managing the situation.",
+              "_id": "676fa3a6e9f37d7e610cc772"
+            }
+          ],
+          "recommendations": [
+            {
+              "for_response": "I'm sorry, I didn't catch that. Could you please clarify your question about the laptop stocks?",
+              "suggestion": "Improve the bot's natural language understanding to better interpret user queries, reducing the need for clarification requests.",
+              "_id": "676fa3a6e9f37d7e610cc773"
+            },
+            {
+              "for_response": "I'm sorry for any confusion, but I'm unable to take personal information like phone numbers. However, I'm here to help with any questions or tasks related to your inventory needs. How else can I assist you?",
+              "suggestion": "Enhance the bot's ability to handle sensitive information by providing clear guidelines on how to respond to such requests while maintaining user engagement.",
+              "_id": "676fa3a6e9f37d7e610cc774"
+            },
+            {
+              "for_response": "I apologize for any inconvenience, but I can't process or store personal information such as phone numbers. If you have any other inquiries or need assistance with inventory, I'm here to help. How can I assist you today?",
+              "suggestion": "Train the bot to provide more engaging responses that acknowledge the user's input while still adhering to privacy policies, thus improving user experience.",
+              "_id": "676fa3a6e9f37d7e610cc775"
+            }
+          ],
+          "createdAt": "2024-12-28T07:07:18.225Z",
+          "updatedAt": "2024-12-28T07:07:18.225Z",
+          "__v": 0
+        },
+        {
+          "_id": "676fdbc7c10747c9abfecb9f",
+          "callId": 97299873,
+          "overall_confidence": 0.68,
+          "confidence_scores": [
+            {
+              "client_question": "What is the price of gaming mouse?",
+              "bot_response": "The price of the Gaming Mouse is INR 55.99. How else can I help you today?",
+              "confidence_score": 0.9,
+              "_id": "676fdbc7c10747c9abfecba0"
+            },
+            {
+              "client_question": "And what is the price for HP monitor?",
+              "bot_response": "The price for the HP Monitor is INR 199.99. How can I assist you further?",
+              "confidence_score": 0.9,
+              "_id": "676fdbc7c10747c9abfecba1"
+            },
+            {
+              "client_question": "Do you have earphones as well?",
+              "bot_response": "Yes, we have earphones in stock, with 39 units currently available. Is there anything else you'd like to know?",
+              "confidence_score": 0.85,
+              "_id": "676fdbc7c10747c9abfecba2"
+            },
+            {
+              "client_question": "And what's the price for each unit?",
+              "bot_response": "The price for the earphones is INR 69.99. How can I help you further?",
+              "confidence_score": 0.9,
+              "_id": "676fdbc7c10747c9abfecba3"
+            },
+            {
+              "client_question": "Do you have any earphones which girls can use?",
+              "bot_response": "Earphones are generally unisex and suitable for anyone, regardless of gender. However, if you're looking for specific designs or colors that might appeal more to girls, you might want to check the available styles or brands. Would you like me to check if we have any specific styles in stock?",
+              "confidence_score": 0.65,
+              "_id": "676fdbc7c10747c9abfecba4"
+            },
+            {
+              "client_question": "I'm so angry by looking at your response. So pathetic.",
+              "bot_response": "I'm sorry if my response upset you. Please let me know how I can assist you better. Your satisfaction is important to us. Is there anything else I can help you with today?",
+              "confidence_score": 0.75,
+              "_id": "676fdbc7c10747c9abfecba5"
+            },
+            {
+              "client_question": "आप एक बारलेस साथ जाने के लिए कुछ बारलेस साथ जाने के लिए जोड़े हैं।",
+              "bot_response": "I understand your concern. Our wireless headphones are designed for universal use and can be enjoyed by anyone, regardless of gender. They come in various styles and colors. I can check our inventory for specific options that might appeal to you. Would you like me to do that?",
+              "confidence_score": 0.6,
+              "_id": "676fdbc7c10747c9abfecba6"
+            },
+            {
+              "client_question": "What the f**k. Absolutely bad product.",
+              "bot_response": "I'm truly sorry to hear that you're feeling this way. Your feedback is important, and we want to ensure you have a positive experience. If there's anything specific you'd like assistance with or if there are any concerns you'd like to discuss, please let me know. I'm here to help.",
+              "confidence_score": 0.7,
+              "_id": "676fdbc7c10747c9abfecba7"
+            }
+          ],
+          "low_confidence_instances": [
+            {
+              "bot_response": "Earphones are generally unisex and suitable for anyone, regardless of gender. However, if you're looking for specific designs or colors that might appeal more to girls, you might want to check the available styles or brands. Would you like me to check if we have any specific styles in stock?",
+              "confidence_score": 0.65,
+              "reason": "The response is vague and does not directly address the user's request for earphones that might appeal specifically to girls. The hedging language used ('might want to check') indicates uncertainty.",
+              "_id": "676fdbc7c10747c9abfecba8"
+            },
+            {
+              "bot_response": "I understand your concern. Our wireless headphones are designed for universal use and can be enjoyed by anyone, regardless of gender. They come in various styles and colors. I can check our inventory for specific options that might appeal to you. Would you like me to do that?",
+              "confidence_score": 0.6,
+              "reason": "The response does not adequately address the user's request and includes unnecessary information about universal use, which may not be relevant to the user's specific inquiry.",
+              "_id": "676fdbc7c10747c9abfecba9"
+            }
+          ],
+          "recommendations": [
+            {
+              "for_response": "Earphones are generally unisex and suitable for anyone, regardless of gender. However, if you're looking for specific designs or colors that might appeal more to girls, you might want to check the available styles or brands. Would you like me to check if we have any specific styles in stock?",
+              "suggestion": "Enhance the bot's ability to provide specific product recommendations based on user preferences, including gender-specific styles or colors.",
+              "_id": "676fdbc7c10747c9abfecbaa"
+            },
+            {
+              "for_response": "I understand your concern. Our wireless headphones are designed for universal use and can be enjoyed by anyone, regardless of gender. They come in various styles and colors. I can check our inventory for specific options that might appeal to you. Would you like me to do that?",
+              "suggestion": "Improve the bot's natural language understanding to better interpret user requests and provide more relevant responses without unnecessary information.",
+              "_id": "676fdbc7c10747c9abfecbab"
+            }
+          ],
+          "createdAt": "2024-12-28T11:06:47.298Z",
+          "updatedAt": "2024-12-28T11:06:47.298Z",
+          "__v": 0
+        },
+        {
+          "_id": "677fbe055217135f0a87cde1",
+          "callId": 39975776,
+          "overall_confidence": 1,
+          "confidence_scores": [
+            {
+              "client_question": "How can I assist you today?",
+              "bot_response": "Hello there! It's great to connect with you. How can I assist you today?",
+              "confidence_score": 1,
+              "_id": "677fbe055217135f0a87cde2"
+            }
+          ],
+          "low_confidence_instances": [
+            
+          ],
+          "recommendations": [
+            
+          ],
+          "createdAt": "2025-01-09T12:16:05.446Z",
+          "updatedAt": "2025-01-09T12:16:05.446Z",
+          "__v": 0
+        },
+        {
+          "_id": "677fbe4a47226fd15bb47d61",
+          "callId": 71415725,
+          "overall_confidence": 1,
+          "confidence_scores": [
+            {
+              "client_question": "How can I help you today?",
+              "bot_response": "Hello! I'm an AI agent here to assist you. How can I help you today?",
+              "confidence_score": 1,
+              "_id": "677fbe4a47226fd15bb47d62"
+            }
+          ],
+          "low_confidence_instances": [
+            
+          ],
+          "recommendations": [
+            
+          ],
+          "createdAt": "2025-01-09T12:17:14.416Z",
+          "updatedAt": "2025-01-09T12:17:14.416Z",
+          "__v": 0
+        },
+        {
+          "_id": "677fbee82109a8afacd17864",
+          "callId": 32829883,
+          "overall_confidence": 0.75,
+          "confidence_scores": [
+            {
+              "client_question": "What is the price of gaming mouse?",
+              "bot_response": "The price of the Gaming Mouse is INR 55.99. Is there anything else you'd like to know?",
+              "confidence_score": 0.9,
+              "_id": "677fbee82109a8afacd17865"
+            }
+          ],
+          "low_confidence_instances": [
+            
+          ],
+          "recommendations": [
+            
+          ],
+          "createdAt": "2025-01-09T12:19:52.289Z",
+          "updatedAt": "2025-01-09T12:19:52.289Z",
+          "__v": 0
+        },
+        {
+          "_id": "6781108d4d276d6bb8cdc5a6",
+          "callId": 17988978,
+          "overall_confidence": 0,
+          "confidence_scores": [
+            {
+              "client_question": "Alok Ranjan.",
+              "bot_response": "Agent message not found",
+              "confidence_score": 0,
+              "_id": "6781108d4d276d6bb8cdc5a7"
+            },
+            {
+              "client_question": "Who is Alok Ranjan?",
+              "bot_response": "Agent message not found",
+              "confidence_score": 0,
+              "_id": "6781108d4d276d6bb8cdc5a8"
+            }
+          ],
+          "low_confidence_instances": [
+            {
+              "bot_response": "Agent message not found",
+              "confidence_score": 0,
+              "reason": "The bot did not provide any response, indicating complete uncertainty and lack of information.",
+              "_id": "6781108d4d276d6bb8cdc5a9"
+            },
+            {
+              "bot_response": "Agent message not found",
+              "confidence_score": 0,
+              "reason": "The bot failed to address the user's question, showing a lack of relevant knowledge.",
+              "_id": "6781108d4d276d6bb8cdc5aa"
+            }
+          ],
+          "recommendations": [
+            {
+              "for_response": "Agent message not found",
+              "suggestion": "Expand the bot's knowledge base to include information about notable individuals, such as Alok Ranjan, to provide relevant responses.",
+              "_id": "6781108d4d276d6bb8cdc5ab"
+            },
+            {
+              "for_response": "Agent message not found",
+              "suggestion": "Implement a fallback mechanism that allows the bot to acknowledge its limitations and suggest alternative ways to find the information, such as searching online.",
+              "_id": "6781108d4d276d6bb8cdc5ac"
+            }
+          ],
+          "createdAt": "2025-01-10T12:20:29.600Z",
+          "updatedAt": "2025-01-10T12:20:29.600Z",
+          "__v": 0
+        },
+        {
+          "_id": "67811468406098f7c71c9890",
+          "callId": 39863839,
+          "overall_confidence": 0,
+          "confidence_scores": [
+            {
+              "client_question": "Agent message not found",
+              "bot_response": "Agent message not found",
+              "confidence_score": 0,
+              "_id": "67811468406098f7c71c9891"
+            },
+            {
+              "client_question": "Agent message not found",
+              "bot_response": "Agent message not found",
+              "confidence_score": 0,
+              "_id": "67811468406098f7c71c9892"
+            }
+          ],
+          "low_confidence_instances": [
+            {
+              "bot_response": "Agent message not found",
+              "confidence_score": 0,
+              "reason": "The bot's response is a repetition of the phrase 'Agent message not found', indicating a complete lack of relevant information or understanding of the user's query.",
+              "_id": "67811468406098f7c71c9893"
+            },
+            {
+              "bot_response": "Agent message not found",
+              "confidence_score": 0,
+              "reason": "The bot's response is a repetition of the phrase 'Agent message not found', indicating a complete lack of relevant information or understanding of the user's query.",
+              "_id": "67811468406098f7c71c9894"
+            }
+          ],
+          "recommendations": [
+            {
+              "for_response": "Agent message not found",
+              "suggestion": "Implement a fallback mechanism that provides a more informative response when the bot cannot retrieve the intended message, such as asking the user to rephrase their question or providing a list of common queries.",
+              "_id": "67811468406098f7c71c9895"
+            },
+            {
+              "for_response": "Agent message not found",
+              "suggestion": "Enhance the bot's error handling capabilities to recognize when it cannot fulfill a request and offer alternative solutions or information to the user.",
+              "_id": "67811468406098f7c71c9896"
+            }
+          ],
+          "createdAt": "2025-01-10T12:36:56.483Z",
+          "updatedAt": "2025-01-10T12:36:56.483Z",
+          "__v": 0
+        }
+      ],
+      "averageOverallConfidence": 0.6927272727272727,
+      "pagination": {
+        "total": 44,
+        "page": 1,
+        "limit": 10,
+        "totalPages": 5
+      }
+    }
+  }
