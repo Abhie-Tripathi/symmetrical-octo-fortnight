@@ -2,13 +2,13 @@
 
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Cell } from "recharts"
 
-export function ConfidenceChart({ data }) {
-  const chartData = data.map((item) => ({
+export function ConfidenceChart({ data }: { data: any }) {
+  const chartData = data.map((item: any) => ({
     callId: item.callId,
     confidence: item.overall_confidence,
-  }))
+  }));
 
-  const getBarColor = (confidence) => {
+  const getBarColor = (confidence: number) => {
     if (confidence >= 0.8) return "#22c55e" // green
     if (confidence >= 0.6) return "#eab308" // yellow
     return "#ef4444" // red
@@ -25,11 +25,11 @@ export function ConfidenceChart({ data }) {
             label={{ value: "Confidence Score", angle: -90, position: "insideLeft" }}
           />
           <Tooltip
-            formatter={(value) => `${(value * 100).toFixed(2)}%`}
-            labelFormatter={(label) => `Call ID: ${label}`}
+            formatter={(value: number) => `${(value * 100).toFixed(2)}%`}
+            labelFormatter={(label: string) => `Call ID: ${label}`}
           />
           <Bar dataKey="confidence">
-            {chartData.map((entry, index) => (
+            {chartData.map((entry: any, index: number) => (
               <Cell key={`cell-${index}`} fill={getBarColor(entry.confidence)} />
             ))}
           </Bar>
