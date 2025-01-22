@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowUpIcon, ArrowDownIcon, AlertTriangle, Lightbulb, MessageCircle } from "lucide-react"
 

@@ -28,7 +28,25 @@ import {
 import { type Interaction } from "./dashboard";
 
 interface UnifiedViewProps {
-  data: Interaction[]
+  data: {
+    _id: string
+    callId: string | number
+    confidence_scores: {
+      client_question: string
+      bot_response: string
+      confidence_score: number
+    }[]
+    overall_confidence: number
+    low_confidence_instances: {
+      bot_response: string
+      confidence_score: number
+      reason: string
+    }[]
+    recommendations: {
+      for_response: string
+      suggestion: string
+    }[]
+  }[]
   pagination: {
     total: number
     page: number
@@ -145,7 +163,7 @@ export function UnifiedView({ data, pagination, currentPage, onPageChange }: Uni
                           <MessageCircle className="h-3 w-3" />
                           {interaction.confidence_scores.length}
                         </Badge>
-                        {interaction.low_confidence_instances.length > 0 && (
+                        {/* {interaction.low_confidence_instances.length > 0 && (
                           <Badge
                             variant="destructive"
                             className="flex items-center gap-1"
@@ -153,7 +171,7 @@ export function UnifiedView({ data, pagination, currentPage, onPageChange }: Uni
                             <AlertTriangle className="h-3 w-3" />
                             {interaction.low_confidence_instances.length}
                           </Badge>
-                        )}
+                        )} */}
                         {interaction.recommendations.length > 0 && (
                           <Badge
                             variant="default"
