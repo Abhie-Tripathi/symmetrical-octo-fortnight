@@ -1,7 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowUpIcon, ArrowDownIcon, AlertTriangle, Lightbulb, MessageCircle } from "lucide-react"
 
-export function OverallStats({ data }) {
+interface OverallStatsProps {
+  data: {
+    results: any[]
+    averageOverallConfidence: number
+    pagination: {
+      total: number
+    }
+  }
+}
+
+export function OverallStats({ data }: OverallStatsProps) {
   const confidenceColor =
     data.averageOverallConfidence >= 0.8
       ? "text-green-700"
@@ -23,7 +33,7 @@ export function OverallStats({ data }) {
   }
 
   return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Average Confidence</CardTitle>

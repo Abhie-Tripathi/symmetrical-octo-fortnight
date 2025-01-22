@@ -25,11 +25,21 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { type Interaction } from "./dashboard";
 
-const ITEMS_PER_PAGE = 5;
+interface UnifiedViewProps {
+  data: Interaction[]
+  pagination: {
+    total: number
+    page: number
+    limit: number
+    totalPages: number
+  }
+  currentPage: number
+  onPageChange: (page: number) => void
+}
 
-export function UnifiedView({ data }) {
-  const [currentPage, setCurrentPage] = useState(1);
+export function UnifiedView({ data, pagination, currentPage, onPageChange }: UnifiedViewProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [confidenceFilter, setConfidenceFilter] = useState("all");
   const [openItems, setOpenItems] = useState<string[]>([]);
@@ -63,11 +73,6 @@ export function UnifiedView({ data }) {
     return matchesSearch && matchesConfidence;
   });
 
-  const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
-  const currentPageData = filteredData.slice(startIndex, endIndex);
-
   const renderConfidenceSticks = (score: number) => {
     const filledSticks = Math.round(score * 10);
     return (
@@ -91,9 +96,9 @@ export function UnifiedView({ data }) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 md:space-y-6">
       {/* Filters */}
-      <div className="flex gap-4">
+      <div className="flex flex-col md:flex-row gap-4">
         <div className="relative flex-1">
           <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
@@ -104,7 +109,7 @@ export function UnifiedView({ data }) {
           />
         </div>
         <Select value={confidenceFilter} onValueChange={setConfidenceFilter}>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-full md:w-[180px]">
             <SelectValue placeholder="Filter by confidence" />
           </SelectTrigger>
           <SelectContent>
@@ -116,9 +121,9 @@ export function UnifiedView({ data }) {
         </Select>
       </div>
 
-      <ScrollArea className="h-[800px]">
+      <ScrollArea className="h-[500px] md:h-[800px]">
         <div className="space-y-2">
-          {currentPageData.map((interaction) => (
+          {filteredData.map((interaction) => (
             <Collapsible
               key={interaction._id}
               open={openItems.includes(interaction._id)}
@@ -324,8 +329,8 @@ export function UnifiedView({ data }) {
 
       <Pagination
         currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={setCurrentPage}
+        totalPages={pagination.totalPages}
+        onPageChange={onPageChange}
       />
     </div>
   );
