@@ -58,8 +58,9 @@ interface ApiResponse {
 
 async function fetchData(page: number, limit: number): Promise<ApiResponse> {
   const response = await fetch(
-    `https://demo.agentspanel.com/confidence?page=${page}&limit=${limit}`
+    `/api/confidence?page=${page}&limit=${limit}`
   );
+  console.log(response);
   if (!response.ok) {
     throw new Error("Network response was not ok");
   }
